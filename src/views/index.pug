@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title vk-auth
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css' integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb' crossorigin='anonymous')
+  body
+    if !isUser
+      a.mt-2.ml-2(href= url class='btn btn-primary btn-lg') Log in
+    else
+      form.form-inline(action='/session?_method=DELETE' method='post')
+        button.btn.btn-primary.btn-lg.mt-2.ml-2(type='submit') Log out
+      h4.ml-2= [first_name, last_name].join(' ')
+      for item in items
+        div.container
+          ul.list-group
+            li.list-group-item= [item.first_name, item.last_name].join(' ')

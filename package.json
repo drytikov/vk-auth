@@ -1,0 +1,48 @@
+{
+  "name": "vk-auth-rytikov",
+  "version": "0.1.0",
+  "description": "",
+  "engines": {
+    "node": "8"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "babel-node": "babel-node",
+    "eslint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drytikov/vk-auth.git"
+  },
+  "author": "drytikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drytikov/vk-auth/issues"
+  },
+  "homepage": "https://github.com/drytikov/vk-auth#readme",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "memorystore": "^1.6.0",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0",
+    "pug": "^2.0.0-rc.4",
+    "session-file-store": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-eslint": "*",
+    "babel-plugin-transform-runtime": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*",
+    "debug": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-import": "*"
+  }
+}
